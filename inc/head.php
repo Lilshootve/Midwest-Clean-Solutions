@@ -63,10 +63,10 @@ $canonical = $config['siteUrl'] . '/' . ($currentPage === 'index' ? '' : $curren
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
   
   <!-- Favicon placeholder -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   
   <?php
   require_once __DIR__ . '/schema.php';

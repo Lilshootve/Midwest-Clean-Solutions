@@ -40,5 +40,5 @@
 Options -Indexes
 
 # Custom 404
-ErrorDocument 404 /404.php
+ErrorDocument 404 404.php
 

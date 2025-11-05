@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../inc/config.php';
-require_once __DIR__ . '/../inc/services-data.php';
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/services-data.php';
 
-$config = require __DIR__ . '/../inc/config.php';
-require __DIR__ . '/../inc/head.php';
-require __DIR__ . '/../inc/header.php';
+$config = require __DIR__ . '/inc/config.php';
+require __DIR__ . '/inc/head.php';
+require __DIR__ . '/inc/header.php';
 ?>
 
 <section class="py-16 md:py-24 bg-white">
@@ -25,7 +25,7 @@ require __DIR__ . '/../inc/header.php';
           <div class="bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition-all duration-300 border border-gray-100">
             <h3 class="text-lg font-semibold text-[var(--ink)] mb-2"><?php echo htmlspecialchars($service[0]); ?></h3>
             <p class="text-xl font-bold text-[var(--blue)] mb-2"><?php echo htmlspecialchars($service[1]); ?></p>
-            <a href="/contact.php" class="text-sm text-[var(--aqua)] hover:text-[var(--blue)] font-medium">Get Quote →</a>
+            <a href="contact.php" class="text-sm text-[var(--aqua)] hover:text-[var(--blue)] font-medium">Get Quote →</a>
           </div>
           <?php endforeach; ?>
         </div>
@@ -43,5 +43,5 @@ require __DIR__ . '/../inc/header.php';
   </div>
 </section>
 
-<?php require __DIR__ . '/../inc/footer.php'; ?>
+<?php require __DIR__ . '/inc/footer.php'; ?>
 

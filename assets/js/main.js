@@ -65,7 +65,7 @@ function showToast(message, type = 'success') {
     const formData = new FormData(form);
     
     try {
-      const response = await fetch('/api/quote.php', {
+      const response = await fetch('api/quote.php', {
         method: 'POST',
         body: formData,
       });

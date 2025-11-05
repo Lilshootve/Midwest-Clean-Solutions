@@ -31,19 +31,19 @@ $config = require __DIR__ . '/config.php';
       <div>
         <h4 class="font-semibold mb-4">Quick Links</h4>
         <nav class="space-y-2">
-          <a href="/" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Home</a>
-          <a href="/services.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Services</a>
-          <a href="/pricing.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Pricing</a>
-          <a href="/about.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">About</a>
-          <a href="/contact.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Contact</a>
+          <a href="index.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Home</a>
+          <a href="services.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Services</a>
+          <a href="pricing.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Pricing</a>
+          <a href="about.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">About</a>
+          <a href="contact.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Contact</a>
         </nav>
       </div>
       
       <div>
         <h4 class="font-semibold mb-4">Legal</h4>
         <nav class="space-y-2">
-          <a href="/privacy.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Privacy Policy</a>
-          <a href="/terms.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Terms of Service</a>
+          <a href="privacy.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Privacy Policy</a>
+          <a href="terms.php" class="block text-sm text-gray-300 hover:text-[var(--aqua)] transition-colors">Terms of Service</a>
         </nav>
       </div>
     </div>
@@ -54,7 +54,7 @@ $config = require __DIR__ . '/config.php';
   </div>
 </footer>
 
-<script src="/assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
 

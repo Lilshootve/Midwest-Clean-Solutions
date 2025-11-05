@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../inc/config.php';
-require_once __DIR__ . '/../inc/services-data.php';
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/services-data.php';
 
-$config = require __DIR__ . '/../inc/config.php';
-require __DIR__ . '/../inc/head.php';
-require __DIR__ . '/../inc/header.php';
+$config = require __DIR__ . '/inc/config.php';
+require __DIR__ . '/inc/head.php';
+require __DIR__ . '/inc/header.php';
 ?>
 
 <section class="py-16 md:py-24 bg-white">
@@ -53,5 +53,5 @@ require __DIR__ . '/../inc/header.php';
   </div>
 </section>
 
-<?php require __DIR__ . '/../inc/footer.php'; ?>
+<?php require __DIR__ . '/inc/footer.php'; ?>
 

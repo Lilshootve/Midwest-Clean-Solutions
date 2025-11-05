@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../inc/config.php';
-require_once __DIR__ . '/../inc/csrf.php';
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/csrf.php';
 
-$config = require __DIR__ . '/../inc/config.php';
-require __DIR__ . '/../inc/head.php';
-require __DIR__ . '/../inc/header.php';
+$config = require __DIR__ . '/inc/config.php';
+require __DIR__ . '/inc/head.php';
+require __DIR__ . '/inc/header.php';
 ?>
 
 <section class="py-16 md:py-24 bg-gradient-to-b from-white to-[var(--ice)]">
@@ -48,7 +48,7 @@ require __DIR__ . '/../inc/header.php';
     </div>
 
     <div class="max-w-2xl mx-auto">
-      <form id="quote-form" class="space-y-6 bg-white rounded-2xl shadow-lg p-8" method="POST" action="/api/quote.php">
+      <form id="quote-form" class="space-y-6 bg-white rounded-2xl shadow-lg p-8" method="POST" action="api/quote.php">
         <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
         <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
         
@@ -129,5 +129,5 @@ require __DIR__ . '/../inc/header.php';
   </div>
 </section>
 
-<?php require __DIR__ . '/../inc/footer.php'; ?>
+<?php require __DIR__ . '/inc/footer.php'; ?>
 

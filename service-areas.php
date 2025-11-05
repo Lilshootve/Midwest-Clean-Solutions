@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../inc/config.php';
+require_once __DIR__ . '/inc/config.php';
 
-$config = require __DIR__ . '/../inc/config.php';
-require __DIR__ . '/../inc/head.php';
-require __DIR__ . '/../inc/header.php';
+$config = require __DIR__ . '/inc/config.php';
+require __DIR__ . '/inc/head.php';
+require __DIR__ . '/inc/header.php';
 
 $serviceAreas = [
   'Milwaukee', 'Waukesha', 'Pewaukee', 'Brookfield', 'New Berlin', 'Wauwatosa',
@@ -49,7 +49,7 @@ $serviceAreas = [
       <div class="bg-[var(--blue)] bg-opacity-5 p-6 rounded-lg text-center">
         <p class="text-gray-700">
           Not sure if we serve your area? 
-          <a href="/contact.php" class="text-[var(--blue)] hover:text-[var(--aqua)] font-semibold">Contact us</a> 
+          <a href="contact.php" class="text-[var(--blue)] hover:text-[var(--aqua)] font-semibold">Contact us</a> 
           and we'll let you know!
         </p>
       </div>
@@ -57,5 +57,5 @@ $serviceAreas = [
   </div>
 </section>
 
-<?php require __DIR__ . '/../inc/footer.php'; ?>
+<?php require __DIR__ . '/inc/footer.php'; ?>
 

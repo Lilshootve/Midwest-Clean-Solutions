@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../inc/config.php';
-require_once __DIR__ . '/../inc/csrf.php';
-require_once __DIR__ . '/../inc/services-data.php';
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/csrf.php';
+require_once __DIR__ . '/inc/services-data.php';
 
-$config = require __DIR__ . '/../inc/config.php';
-require __DIR__ . '/../inc/head.php';
-require __DIR__ . '/../inc/header.php';
+$config = require __DIR__ . '/inc/config.php';
+require __DIR__ . '/inc/head.php';
+require __DIR__ . '/inc/header.php';
 ?>
 
 <section class="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[var(--ice)] via-white to-[var(--ice)] overflow-hidden">
@@ -29,7 +29,7 @@ require __DIR__ . '/../inc/header.php';
         <a href="#quote-form" onclick="scrollToForm(); return false;" class="px-8 py-3 bg-[var(--blue)] text-white rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
           Get a Free Quote
         </a>
-        <a href="/services.php" class="px-8 py-3 border-2 border-[var(--blue)] text-[var(--blue)] rounded-lg font-semibold text-lg hover:bg-[var(--ice)] transition-all">
+        <a href="services.php" class="px-8 py-3 border-2 border-[var(--blue)] text-[var(--blue)] rounded-lg font-semibold text-lg hover:bg-[var(--ice)] transition-all">
           View Services
         </a>
       </div>
@@ -121,13 +121,13 @@ require __DIR__ . '/../inc/header.php';
         <h3 class="text-lg font-semibold text-[var(--ink)] mb-2"><?php echo htmlspecialchars($service[0]); ?></h3>
         <p class="text-2xl font-bold text-[var(--blue)] mb-2"><?php echo htmlspecialchars($service[1]); ?></p>
         <p class="text-gray-600 text-sm mb-4"><?php echo htmlspecialchars($service[2]); ?></p>
-        <a href="/contact.php" class="text-sm text-[var(--aqua)] hover:text-[var(--blue)] font-medium">Get Quote →</a>
+            <a href="contact.php" class="text-sm text-[var(--aqua)] hover:text-[var(--blue)] font-medium">Get Quote →</a>
       </div>
       <?php endforeach; ?>
     </div>
 
     <div class="text-center">
-      <a href="/services.php" class="px-8 py-3 bg-[var(--blue)] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg">
+      <a href="services.php" class="px-8 py-3 bg-[var(--blue)] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg">
         View All Services
       </a>
     </div>
@@ -142,7 +142,7 @@ require __DIR__ . '/../inc/header.php';
         <p class="text-lg text-gray-600">Fill out the form below and we'll get back to you within 24 hours.</p>
       </div>
 
-      <form id="quote-form" class="space-y-6 bg-white rounded-2xl shadow-lg p-8" method="POST" action="/api/quote.php">
+      <form id="quote-form" class="space-y-6 bg-white rounded-2xl shadow-lg p-8" method="POST" action="api/quote.php">
         <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
         <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
         
@@ -190,5 +190,5 @@ require __DIR__ . '/../inc/header.php';
   </div>
 </section>
 
-<?php require __DIR__ . '/../inc/footer.php'; ?>
+<?php require __DIR__ . '/inc/footer.php'; ?>
 
