@@ -48,7 +48,7 @@ Hostinger Git auto-deploy will automatically pull from the `main` branch.
 ## Hostinger Deployment
 
 1. Connect GitHub repository in Hostinger panel
-2. Set document root to `/public`
+2. Set document root to root directory (all PHP files are in root)
 3. Configure SMTP settings in `.env` file
 4. Ensure PHP 8.2+ is enabled
 5. Deploy automatically from `main` branch
