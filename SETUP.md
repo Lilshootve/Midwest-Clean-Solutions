@@ -68,23 +68,22 @@ Midwest-Clean-Solutions/
 │   ├── head.php           # HTML head includes
 │   ├── header.php         # Site header
 │   └── footer.php         # Site footer
-├── public/
-│   ├── index.php          # Home page
-│   ├── services.php       # Services page
-│   ├── pricing.php        # Pricing page
-│   ├── contact.php        # Contact page
-│   ├── about.php          # About page
-│   ├── service-areas.php  # Service areas
-│   ├── privacy.php        # Privacy policy
-│   ├── terms.php          # Terms of service
-│   ├── 404.php            # 404 error page
-│   ├── .htaccess          # Apache configuration
-│   └── assets/
-│       ├── css/
-│       │   └── custom.css # Custom styles
-│       ├── js/
-│       │   └── main.js    # JavaScript
-│       └── img/           # Images
+├── assets/
+│   ├── css/
+│   │   └── custom.css     # Custom styles
+│   ├── js/
+│   │   └── main.js        # JavaScript
+│   └── img/               # Images
+├── index.php              # Home page
+├── services.php           # Services page
+├── pricing.php            # Pricing page
+├── contact.php            # Contact page
+├── about.php              # About page
+├── service-areas.php      # Service areas
+├── privacy.php            # Privacy policy
+├── terms.php              # Terms of service
+├── 404.php                # 404 error page
+├── .htaccess              # Apache configuration
 ├── composer.json          # PHP dependencies
 ├── sitemap.xml.php        # Dynamic sitemap
 ├── robots.txt             # Search engine crawler rules

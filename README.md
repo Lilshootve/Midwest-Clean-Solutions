@@ -55,7 +55,7 @@ A production-grade, luxury-looking website for Midwest Clean Solutions LLC, buil
 
 ## Hostinger Deployment
 
-1. **Set Document Root**: Configure Hostinger to use `/public` as document root
+1. **Set Document Root**: Configure Hostinger to use root directory (all PHP files are in root)
 2. **Configure SMTP**: Update `.env` file with your Hostinger SMTP credentials
 3. **Enable PHP 8.2+**: Ensure PHP 8.2 or higher is enabled
 4. **Auto-Deploy**: Connect GitHub repository for automatic deployments
@@ -79,9 +79,8 @@ MAIL_FROM=noreply@midwestcleansolutions.com
 ```
 ├── api/              # API endpoints
 ├── inc/              # PHP includes (config, header, footer, etc.)
-├── public/           # Public-facing files (document root)
-│   ├── assets/       # CSS, JS, images
-│   └── *.php         # Page files
+├── assets/           # CSS, JS, images
+├── *.php             # Page files (root directory)
 ├── composer.json     # PHP dependencies
 ├── sitemap.xml.php   # Dynamic sitemap generator
 └── robots.txt        # Search engine rules
