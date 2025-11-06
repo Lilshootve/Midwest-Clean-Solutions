@@ -9,29 +9,28 @@ require __DIR__ . '/inc/header.php';
 ?>
 
 <section class="hero-premium relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-  <!-- Premium Light Blooms -->
-  <div class="absolute inset-0 opacity-20">
+  <!-- Premium Light Blooms - Reduced opacity for better text visibility -->
+  <div class="absolute inset-0 opacity-15">
     <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--aqua)] rounded-full blur-[120px] animate-pulse"></div>
     <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[var(--blue)] rounded-full blur-[140px] animate-pulse" style="animation-delay: 1s;"></div>
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/5 rounded-full blur-[100px]"></div>
   </div>
   
-  <!-- Subtle Grid Overlay -->
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 40px 40px;"></div>
-  
   <!-- Dark overlay to ensure text readability -->
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/20 pointer-events-none"></div>
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="max-w-5xl mx-auto text-center space-y-10">
-      <div class="space-y-6 animate-fade-in">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-premium-light leading-tight tracking-tight">
-          <span class="text-premium-glow">Immaculate Cleaning.</span><br>
-          <span class="text-premium-light">Visible Results.</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
-          Premium residential & commercial cleaning services across <?php echo htmlspecialchars($config['serviceArea']); ?>.
-        </p>
+      <!-- Dark backdrop for text content to improve readability -->
+      <div class="relative backdrop-blur-md bg-black/30 rounded-3xl p-8 md:p-12 mx-4 md:mx-0 border border-white/10 shadow-2xl">
+        <div class="space-y-6 animate-fade-in">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight" style="color: #FFFFFF !important; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 191, 166, 0.4);">
+            <span>Immaculate Cleaning.</span><br>
+            <span>Visible Results.</span>
+          </h1>
+          <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-medium" style="color: #FFFFFF !important; text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7), 0 1px 6px rgba(0, 0, 0, 0.5);">
+            Premium residential & commercial cleaning services across <?php echo htmlspecialchars($config['serviceArea']); ?>.
+          </p>
+        </div>
       </div>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
@@ -44,29 +43,29 @@ require __DIR__ . '/inc/header.php';
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-sm bg-white/10 rounded-2xl p-4 border border-white/20" style="color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);">
-          <div class="w-10 h-10 rounded-full bg-[var(--aqua)]/30 flex items-center justify-center backdrop-blur-sm border border-[var(--aqua)]/40">
-            <span class="text-[var(--aqua)] text-xl font-bold" style="filter: drop-shadow(0 0 8px rgba(0, 191, 166, 0.6));">✓</span>
+        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/30 shadow-xl" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
+          <div class="w-12 h-12 rounded-full bg-[var(--aqua)]/40 flex items-center justify-center backdrop-blur-sm border-2 border-[var(--aqua)]/60 shadow-lg">
+            <span class="text-[var(--aqua)] text-2xl font-bold" style="filter: drop-shadow(0 0 12px rgba(0, 191, 166, 0.8));">✓</span>
           </div>
-          <span class="text-center font-medium">Licensed & insured</span>
+          <span class="text-center font-semibold">Licensed & insured</span>
         </div>
-        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-sm bg-white/10 rounded-2xl p-4 border border-white/20" style="color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);">
-          <div class="w-10 h-10 rounded-full bg-[var(--aqua)]/30 flex items-center justify-center backdrop-blur-sm border border-[var(--aqua)]/40">
-            <span class="text-[var(--aqua)] text-xl font-bold" style="filter: drop-shadow(0 0 8px rgba(0, 191, 166, 0.6));">✓</span>
+        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/30 shadow-xl" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
+          <div class="w-12 h-12 rounded-full bg-[var(--aqua)]/40 flex items-center justify-center backdrop-blur-sm border-2 border-[var(--aqua)]/60 shadow-lg">
+            <span class="text-[var(--aqua)] text-2xl font-bold" style="filter: drop-shadow(0 0 12px rgba(0, 191, 166, 0.8));">✓</span>
           </div>
-          <span class="text-center font-medium">Background-checked staff</span>
+          <span class="text-center font-semibold">Background-checked staff</span>
         </div>
-        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-sm bg-white/10 rounded-2xl p-4 border border-white/20" style="color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);">
-          <div class="w-10 h-10 rounded-full bg-[var(--aqua)]/30 flex items-center justify-center backdrop-blur-sm border border-[var(--aqua)]/40">
-            <span class="text-[var(--aqua)] text-xl font-bold" style="filter: drop-shadow(0 0 8px rgba(0, 191, 166, 0.6));">✓</span>
+        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/30 shadow-xl" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
+          <div class="w-12 h-12 rounded-full bg-[var(--aqua)]/40 flex items-center justify-center backdrop-blur-sm border-2 border-[var(--aqua)]/60 shadow-lg">
+            <span class="text-[var(--aqua)] text-2xl font-bold" style="filter: drop-shadow(0 0 12px rgba(0, 191, 166, 0.8));">✓</span>
           </div>
-          <span class="text-center font-medium">Eco-friendly options</span>
+          <span class="text-center font-semibold">Eco-friendly options</span>
         </div>
-        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-sm bg-white/10 rounded-2xl p-4 border border-white/20" style="color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);">
-          <div class="w-10 h-10 rounded-full bg-[var(--aqua)]/30 flex items-center justify-center backdrop-blur-sm border border-[var(--aqua)]/40">
-            <span class="text-[var(--aqua)] text-xl font-bold" style="filter: drop-shadow(0 0 8px rgba(0, 191, 166, 0.6));">✓</span>
+        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/30 shadow-xl" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
+          <div class="w-12 h-12 rounded-full bg-[var(--aqua)]/40 flex items-center justify-center backdrop-blur-sm border-2 border-[var(--aqua)]/60 shadow-lg">
+            <span class="text-[var(--aqua)] text-2xl font-bold" style="filter: drop-shadow(0 0 12px rgba(0, 191, 166, 0.8));">✓</span>
           </div>
-          <span class="text-center font-medium">Flexible scheduling</span>
+          <span class="text-center font-semibold">Flexible scheduling</span>
         </div>
       </div>
     </div>

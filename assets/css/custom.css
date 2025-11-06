@@ -245,41 +245,47 @@ textarea:focus {
   outline-offset: 2px;
 }
 
-/* Premium Text Styles */
+/* Premium Text Styles - Maximum visibility */
 .text-premium-light {
   color: #FFFFFF !important;
   text-shadow: 
-    0 2px 12px rgba(0, 0, 0, 0.4),
-    0 4px 20px rgba(0, 0, 0, 0.3);
+    0 4px 20px rgba(0, 0, 0, 0.9),
+    0 2px 10px rgba(0, 0, 0, 0.7),
+    0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .text-premium-glow {
   color: #FFFFFF !important;
   text-shadow: 
-    0 0 30px rgba(0, 191, 166, 0.5),
-    0 2px 12px rgba(0, 0, 0, 0.4),
-    0 4px 20px rgba(0, 0, 0, 0.3);
+    0 0 40px rgba(0, 191, 166, 0.6),
+    0 4px 20px rgba(0, 0, 0, 0.9),
+    0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 /* Ensure text is visible in hero section */
 .hero-premium h1,
 .hero-premium h2,
 .hero-premium h3,
-.hero-premium p {
+.hero-premium p,
+.hero-premium span {
   color: #FFFFFF !important;
 }
 
 .hero-premium h1 {
   text-shadow: 
-    0 2px 16px rgba(0, 0, 0, 0.5),
-    0 4px 24px rgba(0, 0, 0, 0.4);
+    0 4px 24px rgba(0, 0, 0, 1),
+    0 2px 12px rgba(0, 0, 0, 0.8),
+    0 1px 6px rgba(0, 0, 0, 0.6);
+  font-weight: 800;
 }
 
 .hero-premium p {
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #FFFFFF !important;
   text-shadow: 
-    0 2px 8px rgba(0, 0, 0, 0.4),
-    0 1px 4px rgba(0, 0, 0, 0.3);
+    0 3px 16px rgba(0, 0, 0, 0.9),
+    0 2px 8px rgba(0, 0, 0, 0.7),
+    0 1px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
 }
 
 /* Premium Section Dividers */
