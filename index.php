@@ -21,23 +21,23 @@ require __DIR__ . '/inc/header.php';
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="max-w-5xl mx-auto text-center space-y-10">
       <!-- Dark backdrop for text content to improve readability -->
-      <div class="relative backdrop-blur-md bg-black/30 rounded-3xl p-8 md:p-12 mx-4 md:mx-0 border border-white/10 shadow-2xl">
+      <div class="relative backdrop-blur-lg bg-black/60 rounded-3xl p-8 md:p-12 mx-4 md:mx-0 border-2 border-white/30 shadow-2xl" style="box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);">
         <div class="space-y-6 animate-fade-in">
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight" style="color: #FFFFFF !important; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 191, 166, 0.4);">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight" style="color: #FFFFFF !important; text-shadow: 0 6px 24px rgba(0, 0, 0, 1), 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 6px rgba(0, 0, 0, 0.7);">
             <span>Immaculate Cleaning.</span><br>
             <span>Visible Results.</span>
           </h1>
-          <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-medium" style="color: #FFFFFF !important; text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7), 0 1px 6px rgba(0, 0, 0, 0.5);">
+          <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-semibold" style="color: #FFFFFF !important; text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
             Premium residential & commercial cleaning services across <?php echo htmlspecialchars($config['serviceArea']); ?>.
           </p>
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
-        <a href="#quote-form" onclick="scrollToForm(); return false;" class="btn-premium px-10 py-4 text-white rounded-xl font-semibold text-lg relative z-10">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 pt-6">
+        <a href="#quote-form" onclick="scrollToForm(); return false;" class="inline-block px-10 py-4 rounded-xl font-bold text-lg relative z-10 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(135deg, #2E8BC0 0%, #00BFA6 100%) !important; box-shadow: 0 8px 32px rgba(46, 139, 192, 0.5), 0 4px 16px rgba(0, 191, 166, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3); border: 2px solid rgba(255, 255, 255, 0.2);">
           Get a Free Quote
         </a>
-        <a href="services.php" class="px-10 py-4 bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-2xl relative z-10">
+        <a href="services.php" class="inline-block px-10 py-4 rounded-xl font-bold text-lg relative z-10 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/40" style="background: rgba(255, 255, 255, 0.2) !important; backdrop-filter: blur(16px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3); text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);">
           View Services
         </a>
       </div>
