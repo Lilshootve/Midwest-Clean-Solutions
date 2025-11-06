@@ -125,6 +125,8 @@ header.scrolled {
   background: linear-gradient(135deg, var(--midnight-aqua) 0%, var(--midnight-aqua-light) 50%, var(--midnight-aqua-accent) 100%);
   position: relative;
   overflow: hidden;
+  /* Ensure dark background for text contrast */
+  background-color: var(--midnight-aqua);
 }
 
 .hero-premium::before {
@@ -135,10 +137,11 @@ header.scrolled {
   width: 200%;
   height: 200%;
   background: 
-    radial-gradient(circle at 30% 30%, rgba(0, 191, 166, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(46, 139, 192, 0.12) 0%, transparent 50%);
+    radial-gradient(circle at 30% 30%, rgba(0, 191, 166, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(46, 139, 192, 0.08) 0%, transparent 50%);
   animation: float 20s ease-in-out infinite;
   pointer-events: none;
+  opacity: 0.6;
 }
 
 .hero-premium::after {
@@ -244,14 +247,39 @@ textarea:focus {
 
 /* Premium Text Styles */
 .text-premium-light {
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF !important;
+  text-shadow: 
+    0 2px 12px rgba(0, 0, 0, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .text-premium-glow {
+  color: #FFFFFF !important;
   text-shadow: 
-    0 0 20px rgba(0, 191, 166, 0.3),
-    0 2px 8px rgba(0, 0, 0, 0.2);
+    0 0 30px rgba(0, 191, 166, 0.5),
+    0 2px 12px rgba(0, 0, 0, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure text is visible in hero section */
+.hero-premium h1,
+.hero-premium h2,
+.hero-premium h3,
+.hero-premium p {
+  color: #FFFFFF !important;
+}
+
+.hero-premium h1 {
+  text-shadow: 
+    0 2px 16px rgba(0, 0, 0, 0.5),
+    0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hero-premium p {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Premium Section Dividers */
