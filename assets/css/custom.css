@@ -12,9 +12,27 @@ html {
 }
 
 body {
-  background: var(--bg);
+  /* Fondo sofisticado: capas sutiles de color y una cuadrícula apenas visible */
+  background:
+    radial-gradient(1200px 600px at -10% -10%, var(--ice) 0%, rgba(229, 247, 251, 0) 60%),
+    radial-gradient(900px 500px at 110% 0%, rgba(46, 139, 192, 0.10) 0%, rgba(46, 139, 192, 0) 60%),
+    radial-gradient(700px 400px at 50% 120%, rgba(0, 191, 166, 0.08) 0%, rgba(0, 191, 166, 0) 60%),
+    /* Cuadrícula muy tenue para textura */
+    repeating-linear-gradient(0deg, rgba(15, 23, 42, 0.02) 0, rgba(15, 23, 42, 0.02) 1px, transparent 1px, transparent 24px),
+    repeating-linear-gradient(90deg, rgba(15, 23, 42, 0.02) 0, rgba(15, 23, 42, 0.02) 1px, transparent 1px, transparent 24px),
+    linear-gradient(180deg, #FFFFFF, #FFFFFF);
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Superficies tipo tarjeta con micro-sombras y vidrio suave */
+.surface {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06), 0 2px 8px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 1rem;
 }
 
 .brand-gradient {
