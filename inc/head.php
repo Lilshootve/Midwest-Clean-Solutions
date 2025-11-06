@@ -46,14 +46,23 @@ $canonical = $config['siteUrl'] . '/' . ($currentPage === 'index' ? '' : $curren
   <meta property="og:url" content="<?php echo htmlspecialchars($canonical); ?>">
   <meta property="og:title" content="<?php echo htmlspecialchars($title); ?>">
   <meta property="og:description" content="<?php echo htmlspecialchars($description); ?>">
-  <meta property="og:image" content="<?php echo htmlspecialchars($config['siteUrl']); ?>/assets/img/og-home.jpg">
+  <?php 
+  if (isset($config['logo']) && file_exists(__DIR__ . '/../' . $config['logo'])) {
+    $logoParts = explode('/', $config['logo']);
+    $logoParts = array_map('urlencode', $logoParts);
+    $ogImage = $config['siteUrl'] . '/' . implode('/', $logoParts);
+  } else {
+    $ogImage = $config['siteUrl'] . '/assets/img/og-home.jpg';
+  }
+  ?>
+  <meta property="og:image" content="<?php echo htmlspecialchars($ogImage); ?>">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="<?php echo htmlspecialchars($canonical); ?>">
   <meta property="twitter:title" content="<?php echo htmlspecialchars($title); ?>">
   <meta property="twitter:description" content="<?php echo htmlspecialchars($description); ?>">
-  <meta property="twitter:image" content="<?php echo htmlspecialchars($config['siteUrl']); ?>/assets/img/og-home.jpg">
+  <meta property="twitter:image" content="<?php echo htmlspecialchars($ogImage); ?>">
   
   <!-- Preconnect to Tailwind CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,8 +74,17 @@ $canonical = $config['siteUrl'] . '/' . ($currentPage === 'index' ? '' : $curren
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
   
-  <!-- Favicon placeholder -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Favicon -->
+  <?php if (isset($config['logoSmall']) && file_exists(__DIR__ . '/../' . $config['logoSmall'])): ?>
+    <?php 
+    $faviconParts = explode('/', $config['logoSmall']);
+    $faviconParts = array_map('urlencode', $faviconParts);
+    $faviconUrl = implode('/', $faviconParts);
+    ?>
+    <link rel="icon" type="image/png" href="<?php echo htmlspecialchars($faviconUrl); ?>">
+  <?php else: ?>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <?php endif; ?>
   
   <?php
   require_once __DIR__ . '/schema.php';

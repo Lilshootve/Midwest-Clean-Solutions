@@ -8,5 +8,8 @@ return [
   'email' => 'quotes@midwestcleansolutions.com',
   'siteUrl' => 'https://midwestcleansolutions.com',
   'priceRange' => '$$',
+  'logo' => 'assets/img/Midwest Clean solutions LLC.png',
+  'logoSmall' => 'assets/img/Midwest Clean solutions LLC-.png',
+  'logoAlt' => 'Midwest Clean Solutions LLC Logo',
 ];
 
