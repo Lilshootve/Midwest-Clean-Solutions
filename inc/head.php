@@ -2,6 +2,23 @@
 $config = require __DIR__ . '/config.php';
 $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 
+// Función para codificar la URL correctamente (solo el nombre del archivo)
+if (!function_exists('encodeImageUrl')) {
+  function encodeImageUrl($path) {
+    // Separar directorio y nombre de archivo
+    $lastSlash = strrpos($path, '/');
+    if ($lastSlash !== false) {
+      $directory = substr($path, 0, $lastSlash);
+      $filename = substr($path, $lastSlash + 1);
+      // Codificar solo el nombre del archivo (maneja espacios y otros caracteres especiales)
+      $encodedFilename = rawurlencode($filename);
+      return $directory . '/' . $encodedFilename;
+    }
+    // Si no hay directorio, solo codificar el nombre
+    return rawurlencode($path);
+  }
+}
+
 $pageTitles = [
   'index' => 'Home',
   'services' => 'Services',
@@ -48,9 +65,7 @@ $canonical = $config['siteUrl'] . '/' . ($currentPage === 'index' ? '' : $curren
   <meta property="og:description" content="<?php echo htmlspecialchars($description); ?>">
   <?php 
   if (isset($config['logo']) && file_exists(__DIR__ . '/../' . $config['logo'])) {
-    $logoParts = explode('/', $config['logo']);
-    $logoParts = array_map('urlencode', $logoParts);
-    $ogImage = $config['siteUrl'] . '/' . implode('/', $logoParts);
+    $ogImage = $config['siteUrl'] . '/' . encodeImageUrl($config['logo']);
   } else {
     $ogImage = $config['siteUrl'] . '/assets/img/og-home.jpg';
   }
@@ -76,12 +91,7 @@ $canonical = $config['siteUrl'] . '/' . ($currentPage === 'index' ? '' : $curren
   
   <!-- Favicon -->
   <?php if (isset($config['logoSmall']) && file_exists(__DIR__ . '/../' . $config['logoSmall'])): ?>
-    <?php 
-    $faviconParts = explode('/', $config['logoSmall']);
-    $faviconParts = array_map('urlencode', $faviconParts);
-    $faviconUrl = implode('/', $faviconParts);
-    ?>
-    <link rel="icon" type="image/png" href="<?php echo htmlspecialchars($faviconUrl); ?>">
+    <link rel="icon" type="image/png" href="<?php echo htmlspecialchars(encodeImageUrl($config['logoSmall'])); ?>">
   <?php else: ?>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   <?php endif; ?>

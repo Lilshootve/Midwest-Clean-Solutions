@@ -1,34 +1,43 @@
 <?php
 $config = require __DIR__ . '/config.php';
 $currentPage = basename($_SERVER['PHP_SELF'], '.php');
+
+// Función para codificar la URL correctamente (solo el nombre del archivo)
+if (!function_exists('encodeImageUrl')) {
+  function encodeImageUrl($path) {
+    // Separar directorio y nombre de archivo
+    $lastSlash = strrpos($path, '/');
+    if ($lastSlash !== false) {
+      $directory = substr($path, 0, $lastSlash);
+      $filename = substr($path, $lastSlash + 1);
+      // Codificar solo el nombre del archivo (maneja espacios y otros caracteres especiales)
+      $encodedFilename = rawurlencode($filename);
+      return $directory . '/' . $encodedFilename;
+    }
+    // Si no hay directorio, solo codificar el nombre
+    return rawurlencode($path);
+  }
+}
+
+// Verificar existencia de logos
+$logoPath = isset($config['logo']) ? __DIR__ . '/../' . $config['logo'] : '';
+$logoSmallPath = isset($config['logoSmall']) ? __DIR__ . '/../' . $config['logoSmall'] : '';
+$logoExists = !empty($config['logo']) && file_exists($logoPath);
+$logoSmallExists = !empty($config['logoSmall']) && file_exists($logoSmallPath);
 ?>
 <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
       <a href="index.php" class="flex items-center space-x-3 group">
-        <?php 
-        $logoExists = isset($config['logo']) && file_exists(__DIR__ . '/../' . $config['logo']);
-        $logoSmallExists = isset($config['logoSmall']) && file_exists(__DIR__ . '/../' . $config['logoSmall']);
-        ?>
         <?php if ($logoExists || $logoSmallExists): ?>
           <?php if ($logoSmallExists): ?>
-            <?php 
-            $logoSmallParts = explode('/', $config['logoSmall']);
-            $logoSmallParts = array_map('urlencode', $logoSmallParts);
-            $logoSmallUrl = implode('/', $logoSmallParts);
-            ?>
-            <img src="<?php echo htmlspecialchars($logoSmallUrl); ?>" 
-                 alt="<?php echo htmlspecialchars($config['logoAlt']); ?>" 
+            <img src="<?php echo htmlspecialchars(encodeImageUrl($config['logoSmall'])); ?>" 
+                 alt="<?php echo htmlspecialchars($config['logoAlt'] ?? 'Logo'); ?>" 
                  class="h-10 w-auto md:hidden transition-transform group-hover:scale-105">
           <?php endif; ?>
           <?php if ($logoExists): ?>
-            <?php 
-            $logoParts = explode('/', $config['logo']);
-            $logoParts = array_map('urlencode', $logoParts);
-            $logoUrl = implode('/', $logoParts);
-            ?>
-            <img src="<?php echo htmlspecialchars($logoUrl); ?>" 
-                 alt="<?php echo htmlspecialchars($config['logoAlt']); ?>" 
+            <img src="<?php echo htmlspecialchars(encodeImageUrl($config['logo'])); ?>" 
+                 alt="<?php echo htmlspecialchars($config['logoAlt'] ?? 'Logo'); ?>" 
                  class="hidden md:block h-12 lg:h-14 w-auto transition-transform group-hover:scale-105">
           <?php endif; ?>
           <span class="hidden lg:block text-2xl font-bold text-[var(--ink)] group-hover:text-[var(--blue)] transition-colors">
