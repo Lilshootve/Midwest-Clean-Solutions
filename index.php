@@ -8,64 +8,48 @@ require __DIR__ . '/inc/head.php';
 require __DIR__ . '/inc/header.php';
 ?>
 
-<section class="hero-premium relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-  <!-- Premium Light Blooms - Reduced opacity for better text visibility -->
-  <div class="absolute inset-0 opacity-15">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--aqua)] rounded-full blur-[120px] animate-pulse"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[var(--blue)] rounded-full blur-[140px] animate-pulse" style="animation-delay: 1s;"></div>
+<section class="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[var(--ice)] via-white to-[var(--ice)] overflow-hidden">
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-[var(--blue)] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[var(--aqua)] rounded-full blur-3xl"></div>
   </div>
-  
-  <!-- Dark overlay to ensure text readability -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/20 pointer-events-none"></div>
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="max-w-5xl mx-auto text-center space-y-10">
-      <!-- Dark backdrop for text content to improve readability -->
-      <div class="relative backdrop-blur-lg bg-black/60 rounded-3xl p-8 md:p-12 mx-4 md:mx-0 border-2 border-white/30 shadow-2xl" style="box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);">
-        <div class="space-y-6 animate-fade-in">
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight" style="color: #FFFFFF !important; text-shadow: 0 6px 24px rgba(0, 0, 0, 1), 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 6px rgba(0, 0, 0, 0.7);">
-            <span>Immaculate Cleaning.</span><br>
-            <span>Visible Results.</span>
-          </h1>
-          <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-semibold" style="color: #FFFFFF !important; text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
-            Premium residential & commercial cleaning services across <?php echo htmlspecialchars($config['serviceArea']); ?>.
-          </p>
-        </div>
+    <div class="max-w-4xl mx-auto text-center space-y-8">
+      <div class="space-y-6">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--ink)] leading-tight">
+          Immaculate Cleaning. Visible Results.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          Residential & commercial cleaning across <?php echo htmlspecialchars($config['serviceArea']); ?>.
+        </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 pt-6">
-        <a href="#quote-form" onclick="scrollToForm(); return false;" class="inline-block px-10 py-4 rounded-xl font-bold text-lg relative z-10 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(135deg, #2E8BC0 0%, #00BFA6 100%) !important; box-shadow: 0 8px 32px rgba(46, 139, 192, 0.5), 0 4px 16px rgba(0, 191, 166, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3); border: 2px solid rgba(255, 255, 255, 0.2);">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#quote-form" onclick="scrollToForm(); return false;" class="px-8 py-3 bg-[var(--blue)] text-white rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
           Get a Free Quote
         </a>
-        <a href="services.php" class="inline-block px-10 py-4 rounded-xl font-bold text-lg relative z-10 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/40" style="background: rgba(255, 255, 255, 0.2) !important; backdrop-filter: blur(16px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3); text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);">
+        <a href="services.php" class="px-8 py-3 border-2 border-[var(--blue)] text-[var(--blue)] rounded-lg font-semibold text-lg hover:bg-[var(--ice)] transition-all">
           View Services
         </a>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/30 shadow-xl" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
-          <div class="w-12 h-12 rounded-full bg-[var(--aqua)]/40 flex items-center justify-center backdrop-blur-sm border-2 border-[var(--aqua)]/60 shadow-lg">
-            <span class="text-[var(--aqua)] text-2xl font-bold" style="filter: drop-shadow(0 0 12px rgba(0, 191, 166, 0.8));">✓</span>
-          </div>
-          <span class="text-center font-semibold">Licensed & insured</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-3xl mx-auto">
+        <div class="flex items-center justify-center space-x-2 text-sm text-gray-700">
+          <span class="text-[var(--aqua)]">✓</span>
+          <span>Licensed & insured</span>
         </div>
-        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/30 shadow-xl" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
-          <div class="w-12 h-12 rounded-full bg-[var(--aqua)]/40 flex items-center justify-center backdrop-blur-sm border-2 border-[var(--aqua)]/60 shadow-lg">
-            <span class="text-[var(--aqua)] text-2xl font-bold" style="filter: drop-shadow(0 0 12px rgba(0, 191, 166, 0.8));">✓</span>
-          </div>
-          <span class="text-center font-semibold">Background-checked staff</span>
+        <div class="flex items-center justify-center space-x-2 text-sm text-gray-700">
+          <span class="text-[var(--aqua)]">✓</span>
+          <span>Background-checked staff</span>
         </div>
-        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/30 shadow-xl" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
-          <div class="w-12 h-12 rounded-full bg-[var(--aqua)]/40 flex items-center justify-center backdrop-blur-sm border-2 border-[var(--aqua)]/60 shadow-lg">
-            <span class="text-[var(--aqua)] text-2xl font-bold" style="filter: drop-shadow(0 0 12px rgba(0, 191, 166, 0.8));">✓</span>
-          </div>
-          <span class="text-center font-semibold">Eco-friendly options</span>
+        <div class="flex items-center justify-center space-x-2 text-sm text-gray-700">
+          <span class="text-[var(--aqua)]">✓</span>
+          <span>Eco-friendly options</span>
         </div>
-        <div class="flex flex-col items-center space-y-2 text-sm backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/30 shadow-xl" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);">
-          <div class="w-12 h-12 rounded-full bg-[var(--aqua)]/40 flex items-center justify-center backdrop-blur-sm border-2 border-[var(--aqua)]/60 shadow-lg">
-            <span class="text-[var(--aqua)] text-2xl font-bold" style="filter: drop-shadow(0 0 12px rgba(0, 191, 166, 0.8));">✓</span>
-          </div>
-          <span class="text-center font-semibold">Flexible scheduling</span>
+        <div class="flex items-center justify-center space-x-2 text-sm text-gray-700">
+          <span class="text-[var(--aqua)]">✓</span>
+          <span>Flexible scheduling</span>
         </div>
       </div>
     </div>
