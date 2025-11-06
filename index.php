@@ -8,56 +8,71 @@ require __DIR__ . '/inc/head.php';
 require __DIR__ . '/inc/header.php';
 ?>
 
-<section class="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[var(--ice)] via-white to-[var(--ice)] overflow-hidden">
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute top-20 left-10 w-72 h-72 bg-[var(--blue)] rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[var(--aqua)] rounded-full blur-3xl"></div>
+<section class="hero-premium relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+  <!-- Premium Light Blooms -->
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--aqua)] rounded-full blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[var(--blue)] rounded-full blur-[140px] animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/5 rounded-full blur-[100px]"></div>
   </div>
+  
+  <!-- Subtle Grid Overlay -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 40px 40px;"></div>
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="max-w-4xl mx-auto text-center space-y-8">
-      <div class="space-y-6">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--ink)] leading-tight">
-          Immaculate Cleaning. Visible Results.
+    <div class="max-w-5xl mx-auto text-center space-y-10">
+      <div class="space-y-6 animate-fade-in">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-premium-light leading-tight tracking-tight">
+          <span class="text-premium-glow">Immaculate Cleaning.</span><br>
+          <span class="text-white/95">Visible Results.</span>
         </h1>
-        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          Residential & commercial cleaning across <?php echo htmlspecialchars($config['serviceArea']); ?>.
+        <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          Premium residential & commercial cleaning services across <?php echo htmlspecialchars($config['serviceArea']); ?>.
         </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#quote-form" onclick="scrollToForm(); return false;" class="px-8 py-3 bg-[var(--blue)] text-white rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
+        <a href="#quote-form" onclick="scrollToForm(); return false;" class="btn-premium px-10 py-4 text-white rounded-xl font-semibold text-lg relative z-10">
           Get a Free Quote
         </a>
-        <a href="services.php" class="px-8 py-3 border-2 border-[var(--blue)] text-[var(--blue)] rounded-lg font-semibold text-lg hover:bg-[var(--ice)] transition-all">
+        <a href="services.php" class="px-10 py-4 bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-2xl relative z-10">
           View Services
         </a>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-3xl mx-auto">
-        <div class="flex items-center justify-center space-x-2 text-sm text-gray-700">
-          <span class="text-[var(--aqua)]">✓</span>
-          <span>Licensed & insured</span>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+        <div class="flex flex-col items-center space-y-2 text-sm text-white/90 backdrop-blur-sm bg-white/5 rounded-2xl p-4 border border-white/10">
+          <div class="w-10 h-10 rounded-full bg-[var(--aqua)]/20 flex items-center justify-center backdrop-blur-sm">
+            <span class="text-[var(--aqua)] text-xl font-bold">✓</span>
+          </div>
+          <span class="text-center">Licensed & insured</span>
         </div>
-        <div class="flex items-center justify-center space-x-2 text-sm text-gray-700">
-          <span class="text-[var(--aqua)]">✓</span>
-          <span>Background-checked staff</span>
+        <div class="flex flex-col items-center space-y-2 text-sm text-white/90 backdrop-blur-sm bg-white/5 rounded-2xl p-4 border border-white/10">
+          <div class="w-10 h-10 rounded-full bg-[var(--aqua)]/20 flex items-center justify-center backdrop-blur-sm">
+            <span class="text-[var(--aqua)] text-xl font-bold">✓</span>
+          </div>
+          <span class="text-center">Background-checked staff</span>
         </div>
-        <div class="flex items-center justify-center space-x-2 text-sm text-gray-700">
-          <span class="text-[var(--aqua)]">✓</span>
-          <span>Eco-friendly options</span>
+        <div class="flex flex-col items-center space-y-2 text-sm text-white/90 backdrop-blur-sm bg-white/5 rounded-2xl p-4 border border-white/10">
+          <div class="w-10 h-10 rounded-full bg-[var(--aqua)]/20 flex items-center justify-center backdrop-blur-sm">
+            <span class="text-[var(--aqua)] text-xl font-bold">✓</span>
+          </div>
+          <span class="text-center">Eco-friendly options</span>
         </div>
-        <div class="flex items-center justify-center space-x-2 text-sm text-gray-700">
-          <span class="text-[var(--aqua)]">✓</span>
-          <span>Flexible scheduling</span>
+        <div class="flex flex-col items-center space-y-2 text-sm text-white/90 backdrop-blur-sm bg-white/5 rounded-2xl p-4 border border-white/10">
+          <div class="w-10 h-10 rounded-full bg-[var(--aqua)]/20 flex items-center justify-center backdrop-blur-sm">
+            <span class="text-[var(--aqua)] text-xl font-bold">✓</span>
+          </div>
+          <span class="text-center">Flexible scheduling</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-12 md:py-16 bg-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-12 md:py-16 relative">
+  <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
       <div class="flex flex-col items-center text-center space-y-3">
         <div class="w-16 h-16 rounded-full bg-[var(--ice)] flex items-center justify-center">
@@ -95,8 +110,9 @@ require __DIR__ . '/inc/header.php';
   </div>
 </section>
 
-<section class="py-16 md:py-24 bg-gradient-to-b from-white to-[var(--ice)]">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-16 md:py-24 relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-[var(--ice)]/40 to-white/90 backdrop-blur-sm"></div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold text-[var(--ink)] mb-4">Our Services</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -117,32 +133,38 @@ require __DIR__ . '/inc/header.php';
       
       foreach ($featuredServices as $service):
       ?>
-      <div class="bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition-all duration-300">
-        <h3 class="text-lg font-semibold text-[var(--ink)] mb-2"><?php echo htmlspecialchars($service[0]); ?></h3>
-        <p class="text-2xl font-bold text-[var(--blue)] mb-2"><?php echo htmlspecialchars($service[1]); ?></p>
-        <p class="text-gray-600 text-sm mb-4"><?php echo htmlspecialchars($service[2]); ?></p>
-            <a href="contact.php" class="text-sm text-[var(--aqua)] hover:text-[var(--blue)] font-medium">Get Quote →</a>
+      <div class="premium-card bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg p-8 border border-white/50">
+        <h3 class="text-xl font-bold text-[var(--ink)] mb-3"><?php echo htmlspecialchars($service[0]); ?></h3>
+        <p class="text-3xl font-bold text-[var(--blue)] mb-3"><?php echo htmlspecialchars($service[1]); ?></p>
+        <p class="text-gray-600 text-base mb-6 leading-relaxed"><?php echo htmlspecialchars($service[2]); ?></p>
+        <a href="contact.php" class="inline-flex items-center text-sm text-[var(--aqua)] hover:text-[var(--blue)] font-semibold group">
+          Get Quote 
+          <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
       </div>
       <?php endforeach; ?>
     </div>
 
     <div class="text-center">
-      <a href="services.php" class="px-8 py-3 bg-[var(--blue)] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg">
+      <a href="services.php" class="btn-premium px-10 py-4 text-white rounded-xl font-semibold text-lg inline-block">
         View All Services
       </a>
     </div>
   </div>
 </section>
 
-<section id="quote-form" class="py-16 md:py-24 bg-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<section id="quote-form" class="py-16 md:py-24 relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--ice)]/30 to-transparent"></div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="max-w-2xl mx-auto">
-      <div class="text-center mb-8">
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--ink)] mb-4">Get Your Free Quote</h2>
+      <div class="text-center mb-10">
+        <h2 class="text-4xl md:text-5xl font-bold text-[var(--ink)] mb-4">Get Your Free Quote</h2>
         <p class="text-lg text-gray-600">Fill out the form below and we'll get back to you within 24 hours.</p>
       </div>
 
-      <form id="quote-form" class="space-y-6 bg-white rounded-2xl shadow-lg p-8" method="POST" action="api/quote.php">
+      <form id="quote-form" class="space-y-6 surface p-10" method="POST" action="api/quote.php">
         <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
         <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
         
@@ -182,7 +204,7 @@ require __DIR__ . '/inc/header.php';
             <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--blue)] focus:border-transparent"></textarea>
           </div>
         
-        <button type="submit" class="w-full px-8 py-3 bg-[var(--blue)] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg">
+        <button type="submit" class="w-full btn-premium px-8 py-4 text-white rounded-xl font-semibold text-lg">
           Submit Quote Request
         </button>
       </form>

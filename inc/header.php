@@ -25,7 +25,7 @@ $logoSmallPath = isset($config['logoSmall']) ? __DIR__ . '/../' . $config['logoS
 $logoExists = !empty($config['logo']) && file_exists($logoPath);
 $logoSmallExists = !empty($config['logoSmall']) && file_exists($logoSmallPath);
 ?>
-<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/80 backdrop-blur-xl border-b border-white/50">
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
       <a href="index.php" class="flex items-center space-x-3 group">
@@ -63,7 +63,7 @@ $logoSmallExists = !empty($config['logoSmall']) && file_exists($logoSmallPath);
         <a href="tel:<?php echo str_replace([' ', '(', ')', '-'], '', $config['phone']); ?>" class="px-4 py-2 text-sm font-medium text-[var(--ink)] hover:text-[var(--blue)] transition-colors">
           Call Now
         </a>
-        <a href="contact.php" class="px-6 py-2 bg-[var(--blue)] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
+        <a href="contact.php" class="btn-premium px-6 py-2.5 text-white rounded-lg font-semibold text-sm">
           Get a Free Quote
         </a>
       </div>
@@ -84,7 +84,7 @@ $logoSmallExists = !empty($config['logoSmall']) && file_exists($logoSmallPath);
         <a href="service-areas.php" class="px-4 py-2 text-base font-medium <?php echo $currentPage === 'service-areas' ? 'text-[var(--blue)]' : 'text-[var(--ink)]'; ?>">Service Areas</a>
         <a href="contact.php" class="px-4 py-2 text-base font-medium <?php echo $currentPage === 'contact' ? 'text-[var(--blue)]' : 'text-[var(--ink)]'; ?>">Contact</a>
         <div class="pt-4 space-y-2 border-t">
-          <a href="contact.php" class="block w-full px-4 py-2 bg-[var(--blue)] text-white rounded-lg font-semibold text-center">Get a Free Quote</a>
+          <a href="contact.php" class="block w-full btn-premium px-4 py-3 text-white rounded-lg font-semibold text-center">Get a Free Quote</a>
           <a href="tel:<?php echo str_replace([' ', '(', ')', '-'], '', $config['phone']); ?>" class="block w-full px-4 py-2 border-2 border-[var(--blue)] text-[var(--blue)] rounded-lg font-semibold text-center">Call Now</a>
         </div>
       </div>
