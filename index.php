@@ -8,11 +8,11 @@ require __DIR__ . '/inc/head.php';
 require __DIR__ . '/inc/header.php';
 ?>
 
-<section class="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[var(--ice)] via-white to-[var(--ice)] overflow-hidden">
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute top-20 left-10 w-72 h-72 bg-[var(--blue)] rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[var(--aqua)] rounded-full blur-3xl"></div>
-  </div>
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="assets/img/og-home.jpg" aria-hidden="true">
+    <source src="assets/videos/limpieza-video-1.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-white/75 backdrop-blur-sm"></div>
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="max-w-4xl mx-auto text-center space-y-8">

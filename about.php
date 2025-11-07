@@ -27,6 +27,20 @@ require __DIR__ . '/inc/header.php';
         </p>
       </div>
 
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl mb-16">
+        <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="assets/img/og-home.jpg" aria-hidden="true">
+          <source src="assets/videos/limpieza-video-2.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+        <div class="relative z-10 p-8 md:p-12 lg:p-16 text-white space-y-4 max-w-3xl">
+          <h2 class="text-3xl md:text-4xl font-bold">Dedicated To Immaculate Spaces</h2>
+          <p class="text-lg md:text-xl text-white/90">
+            From meticulous detail work to full-scale facility maintenance, our trained technicians deliver
+            the shine your space deserves. See our team in action in this behind-the-scenes look at a typical project day.
+          </p>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
           <svg class="w-10 h-10 text-[var(--blue)] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
