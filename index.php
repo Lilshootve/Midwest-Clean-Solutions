@@ -96,17 +96,29 @@ require __DIR__ . '/inc/header.php';
   </div>
 </section>
 
-<section class="py-16 md:py-24 relative">
-  <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-[var(--ice)]/40 to-white/90 backdrop-blur-sm"></div>
+<section class="py-16 md:py-24 relative overflow-hidden">
+  <!-- Premium Gradient Background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-[#E5F7FB] via-white to-[#F0FAFC]"></div>
+  <div class="absolute inset-0 opacity-40">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-[var(--aqua)] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-[var(--blue)] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute bottom-0 left-1/2 w-96 h-96 bg-[var(--ice)] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 4s;"></div>
+  </div>
+  
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-[var(--ink)] mb-4">Our Services</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-block mb-4">
+        <div class="h-1 w-24 bg-gradient-to-r from-[var(--blue)] to-[var(--aqua)] mx-auto rounded-full"></div>
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--ink)] mb-6 bg-gradient-to-r from-[var(--ink)] to-[var(--blue)] bg-clip-text text-transparent">
+        Our Services
+      </h2>
+      <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
         Comprehensive cleaning solutions for residential and commercial properties
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
       <?php
       $featuredServices = [
         ['Standard House Cleaning', '$100 – $220', 'Regular maintenance cleaning for your home'],
@@ -119,22 +131,36 @@ require __DIR__ . '/inc/header.php';
       
       foreach ($featuredServices as $service):
       ?>
-      <div class="premium-card bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg p-8 border border-white/50">
-        <h3 class="text-xl font-bold text-[var(--ink)] mb-3"><?php echo htmlspecialchars($service[0]); ?></h3>
-        <p class="text-3xl font-bold text-[var(--blue)] mb-3"><?php echo htmlspecialchars($service[1]); ?></p>
-        <p class="text-gray-600 text-base mb-6 leading-relaxed"><?php echo htmlspecialchars($service[2]); ?></p>
-        <a href="contact.php" class="inline-flex items-center text-sm text-[var(--aqua)] hover:text-[var(--blue)] font-semibold group">
-          Get Quote 
-          <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
+      <div class="group relative">
+        <!-- Premium Glass Card -->
+        <div class="surface premium-card h-full p-6 lg:p-8 hover:scale-[1.02]">
+          <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[var(--aqua)]/10 to-transparent rounded-bl-full"></div>
+          <div class="relative z-10">
+            <h3 class="text-xl lg:text-2xl font-bold text-[var(--ink)] mb-4 group-hover:text-[var(--blue)] transition-colors">
+              <?php echo htmlspecialchars($service[0]); ?>
+            </h3>
+            <div class="mb-4">
+              <p class="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[var(--blue)] to-[var(--aqua)] bg-clip-text text-transparent">
+                <?php echo htmlspecialchars($service[1]); ?>
+              </p>
+            </div>
+            <p class="text-gray-600 text-base mb-6 leading-relaxed">
+              <?php echo htmlspecialchars($service[2]); ?>
+            </p>
+            <a href="contact.php" class="inline-flex items-center text-sm font-semibold text-[var(--aqua)] hover:text-[var(--blue)] transition-all group-hover:gap-2 gap-1">
+              Get Quote
+              <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+          <!-- Shine effect on hover -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"></div>
+        </div>
       </div>
       <?php endforeach; ?>
     </div>
 
     <div class="text-center">
-      <a href="services.php" class="btn-premium px-10 py-4 text-white rounded-xl font-semibold text-lg inline-block">
+      <a href="services.php" class="btn-premium px-10 py-4 text-white rounded-xl font-semibold text-lg inline-block shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
         View All Services
       </a>
     </div>
