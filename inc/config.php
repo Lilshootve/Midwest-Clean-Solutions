@@ -7,6 +7,7 @@ return [
   'serviceArea' => 'Milwaukee–Waukesha–Pewaukee, WI',
   'email' => 'info@midwestcleansol.com',
   'siteUrl' => 'https://midwestcleansol.com',
+  'instagram' => 'http://instragram.com/midwestcleansol',
   'priceRange' => '$$',
   'logo' => 'assets/img/Midwest Clean solutions LLC.png',
   'logoSmall' => 'assets/img/Midwest Clean solutions LLC-.png',
