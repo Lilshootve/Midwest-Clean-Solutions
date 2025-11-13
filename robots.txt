@@ -4,5 +4,5 @@ Disallow: /inc/
 Disallow: /api/
 Disallow: /vendor/
 
-Sitemap: https://midwestcleansolutions.com/sitemap.xml.php
+Sitemap: https://midwestcleansol.com/sitemap.xml.php
 

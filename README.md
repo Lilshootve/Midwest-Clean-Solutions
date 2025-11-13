@@ -70,8 +70,8 @@ SMTP_PORT=587
 SMTP_USER=your-email@yourdomain.com
 SMTP_PASS=your-password
 SMTP_SECURE=tls
-MAIL_TO=quotes@midwestcleansolutions.com
-MAIL_FROM=noreply@midwestcleansolutions.com
+MAIL_TO=info@midwestcleansol.com
+MAIL_FROM=noreply@midwestcleansol.com
 ```
 
 ## Project Structure
@@ -168,5 +168,5 @@ Copyright © 2025 Midwest Clean Solutions LLC. All rights reserved.
 
 ## Support
 
-For issues or questions, contact: quotes@midwestcleansolutions.com
+For issues or questions, contact: info@midwestcleansol.com
 
